@@ -1,0 +1,55 @@
+model_from: res.users
+model_to: res.users
+domain: []
+external_id_method: match_field
+external_id_field_from: login
+external_id_field_to: login
+external_id_nomenclature: res_users_%s
+fields:
+  create_uid:
+    cache: True
+    from:
+      name: create_uid
+      relation: res.users
+      type: many2one
+    to:
+      name: create_uid
+      relation: res.users
+      type: many2one
+
+  create_date:
+    from:
+      name: create_date
+      type: datetime
+    to:
+      name: create_date
+      type: datetime
+
+  write_uid:
+    cache: True
+    from:
+      name: write_uid
+      relation: res.users
+      type: many2one
+    to:
+      name: write_uid
+      relation: res.users
+      type: many2one
+  write_date:
+    from:
+      name: write_date
+      type: datetime
+    to:
+      name: write_date
+      type: datetime
+
+  hashed_value:
+    from:
+      name: create_date
+      type: datetime
+    to:
+      name: hashed_value
+      type: char
+    map_method: map_hash
+
+

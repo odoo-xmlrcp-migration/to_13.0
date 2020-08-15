@@ -1,7 +1,9 @@
 model_from: res.users
 model_to: res.users
 domain: []
-external_id_method: row_get_id
+external_id_method: match_field
+external_id_field_from: login
+external_id_field_to: login
 external_id_nomenclature: res_users_%s
 fields:
   login:
