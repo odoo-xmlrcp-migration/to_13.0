@@ -87,7 +87,7 @@ fields:
     from:
       name: state
       type: selection
-    map_method: magic_map
+    map_method: map_sale_order_state
     to:
       name: state
       type: selection

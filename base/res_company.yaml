@@ -1,0 +1,195 @@
+model_from: res.company
+model_to: res.company
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_company_%s
+fields:
+  account_no:
+    from:
+      name: account_no
+      type: char
+    map_method: magic_map
+    to:
+      name: account_no
+      type: char
+  bank_ids:
+    from:
+      name: bank_ids
+      relation: res.partner.bank
+      relation_field: company_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: bank_ids
+      relation: res.partner.bank
+      relation_field: company_id
+      type: one2many
+  child_ids:
+    from:
+      name: child_ids
+      relation: res.company
+      relation_field: parent_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: child_ids
+      relation: res.company
+      relation_field: parent_id
+      type: one2many
+  city:
+    from:
+      name: city
+      type: char
+    map_method: magic_map
+    to:
+      name: city
+      type: char
+  company_registry:
+    from:
+      name: company_registry
+      type: char
+    map_method: magic_map
+    to:
+      name: company_registry
+      type: char
+  country_id:
+    from:
+      name: country_id
+      relation: res.country
+      type: many2one
+    map_method: magic_map
+    to:
+      name: country_id
+      relation: res.country
+      type: many2one
+  currency_id:
+    from:
+      name: currency_id
+      relation: res.currency
+      type: many2one
+    map_method: magic_map
+    to:
+      name: currency_id
+      relation: res.currency
+      type: many2one
+  email:
+    from:
+      name: email
+      type: char
+    map_method: magic_map
+    to:
+      name: email
+      type: char
+  font:
+    from:
+      name: font
+      relation: res.font
+      type: many2one
+    map_method: magic_map
+    to:
+      name: font
+      type: selection
+  logo:
+    from:
+      name: logo
+      type: binary
+    map_method: magic_map
+    to:
+      name: logo
+      type: binary
+  name:
+    from:
+      name: name
+      type: char
+    map_method: magic_map
+    to:
+      name: name
+      type: char
+  parent_id:
+    from:
+      name: parent_id
+      relation: res.company
+      type: many2one
+    map_method: magic_map
+    to:
+      name: parent_id
+      relation: res.company
+      type: many2one
+  partner_id:
+    from:
+      name: partner_id
+      relation: res.partner
+      type: many2one
+    map_method: magic_map
+    to:
+      name: partner_id
+      relation: res.partner
+      type: many2one
+  phone:
+    from:
+      name: phone
+      type: char
+    map_method: magic_map
+    to:
+      name: phone
+      type: char
+  state_id:
+    from:
+      name: state_id
+      relation: res.country.state
+      type: many2one
+    map_method: magic_map
+    to:
+      name: state_id
+      relation: res.country.state
+      type: many2one
+  street:
+    from:
+      name: street
+      type: char
+    map_method: magic_map
+    to:
+      name: street
+      type: char
+  street2:
+    from:
+      name: street2
+      type: char
+    map_method: magic_map
+    to:
+      name: street2
+      type: char
+  user_ids:
+    from:
+      name: user_ids
+      relation: res.users
+      type: many2many
+    map_method: magic_map
+    to:
+      name: user_ids
+      relation: res.users
+      type: many2many
+  vat:
+    from:
+      name: vat
+      type: char
+    map_method: magic_map
+    to:
+      name: vat
+      type: char
+  website:
+    from:
+      name: website
+      type: char
+    map_method: magic_map
+    to:
+      name: website
+      type: char
+  zip:
+    from:
+      name: zip
+      type: char
+    map_method: magic_map
+    to:
+      name: zip
+      type: char

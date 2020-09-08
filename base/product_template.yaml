@@ -146,12 +146,24 @@ fields:
       name: rental
       type: boolean
 
+  supplier_taxes_id:
+    from:
+      name: supplier_taxes_id
+      relation: account.tax
+      type: many2many
+    cache: True
+    map_method: map_account_tax_ri
+    to:
+      name: supplier_taxes_id
+      relation: account.tax
+      type: many2many
   taxes_id:
     from:
       name: taxes_id
       relation: account.tax
       type: many2many
-    map_method: magic_map
+    cache: True
+    map_method: map_account_tax_ri
     to:
       name: taxes_id
       relation: account.tax

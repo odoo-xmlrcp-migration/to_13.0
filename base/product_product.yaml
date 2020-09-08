@@ -282,7 +282,8 @@ fields:
       name: supplier_taxes_id
       relation: account.tax
       type: many2many
-    map_method: magic_map
+    cache: True
+    map_method: map_account_tax_ri
     to:
       name: supplier_taxes_id
       relation: account.tax
@@ -292,7 +293,8 @@ fields:
       name: taxes_id
       relation: account.tax
       type: many2many
-    map_method: magic_map
+    cache: True
+    map_method: map_account_tax_ri
     to:
       name: taxes_id
       relation: account.tax

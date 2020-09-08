@@ -66,13 +66,6 @@ fields:
     to:
       name: date
       type: date
-  debit_limit:
-    from:
-      name: debit_limit
-      type: float
-    to:
-      name: debit_limit
-      type: monetary
   email:
     from:
       name: email

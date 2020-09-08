@@ -113,16 +113,6 @@ fields:
       name: route_id
       relation: stock.location.route
       type: many2one
-  salesman_id:
-    from:
-      name: salesman_id
-      relation: res.users
-      type: many2one
-    map_method: magic_map
-    to:
-      name: salesman_id
-      relation: res.users
-      type: many2one
   sequence:
     from:
       name: sequence
@@ -135,7 +125,7 @@ fields:
     from:
       name: state
       type: selection
-    map_method: magic_map
+    map_method: map_sale_order_state_line
     to:
       name: state
       type: selection
@@ -144,7 +134,8 @@ fields:
       name: tax_id
       relation: account.tax
       type: many2many
-    map_method: magic_map
+    cache: True
+    map_method: map_account_tax_ri
     to:
       name: tax_id
       relation: account.tax

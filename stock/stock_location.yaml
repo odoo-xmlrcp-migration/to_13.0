@@ -1,0 +1,143 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: stock_location_%s
+fields:
+  active:
+    from:
+      name: active
+      type: boolean
+    map_method: magic_map
+    to:
+      name: active
+      type: boolean
+  child_ids:
+    from:
+      name: child_ids
+      relation: stock.location
+      relation_field: location_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: child_ids
+      relation: stock.location
+      relation_field: location_id
+      type: one2many
+  comment:
+    from:
+      name: comment
+      type: text
+    map_method: magic_map
+    to:
+      name: comment
+      type: text
+  company_id:
+    from:
+      name: company_id
+      relation: res.company
+      type: many2one
+    map_method: magic_map
+    to:
+      name: company_id
+      relation: res.company
+      type: many2one
+  location_id:
+    from:
+      name: location_id
+      relation: stock.location
+      type: many2one
+    map_method: magic_map
+    to:
+      name: location_id
+      relation: stock.location
+      type: many2one
+  name:
+    from:
+      name: name
+      type: char
+    map_method: magic_map
+    to:
+      name: name
+      type: char
+  posx:
+    from:
+      name: posx
+      type: integer
+    map_method: magic_map
+    to:
+      name: posx
+      type: integer
+  posy:
+    from:
+      name: posy
+      type: integer
+    map_method: magic_map
+    to:
+      name: posy
+      type: integer
+  posz:
+    from:
+      name: posz
+      type: integer
+    map_method: magic_map
+    to:
+      name: posz
+      type: integer
+  removal_strategy_id:
+    from:
+      name: removal_strategy_id
+      relation: product.removal
+      type: many2one
+    map_method: magic_map
+    to:
+      name: removal_strategy_id
+      relation: product.removal
+      type: many2one
+  scrap_location:
+    from:
+      name: scrap_location
+      type: boolean
+    map_method: magic_map
+    to:
+      name: scrap_location
+      type: boolean
+  usage:
+    from:
+      name: usage
+      type: selection
+    map_method: magic_map
+    to:
+      name: usage
+      type: selection
+model_from: stock.location
+model_to: stock.location
+no_match_fields:
+  complete_name:
+    from:
+      name: complete_name
+      type: char
+  display_name:
+    from:
+      name: display_name
+      type: char
+  loc_barcode:
+    from:
+      name: loc_barcode
+      type: char
+  parent_left:
+    from:
+      name: parent_left
+      type: integer
+  parent_right:
+    from:
+      name: parent_right
+      type: integer
+  partner_id:
+    from:
+      name: partner_id
+      relation: res.partner
+      type: many2one
+  putaway_strategy_id:
+    from:
+      name: putaway_strategy_id
+      relation: product.putaway
+      type: many2one
